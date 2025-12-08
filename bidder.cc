@@ -40,13 +40,27 @@ std::string GetStrategy() {
 //   - You must write exactly 'rounds' number of lines.
 //   - The sum of all bids must not exceed 'budget'.
 //   - Bids must be non-negative integers.
+//void GenerateBids(int rounds, int budget, std::string output_filename) {
+// std::ofstream out{output_filename};
+  //for (int i{0}; i < rounds; i++) {
+  //out << budget/rounds << "\n";
+  //}
+//}
+
 void GenerateBids(int rounds, int budget, std::string output_filename) {
  std::ofstream out{output_filename};
-  for (int i{0}; i < rounds; i++) {
-  out << budget/rounds << "\n";
+ out << 0 << "\n";
+ 
+ int result = budget/(rounds) + 1;
+  for (int i{1}; i < rounds; i++) {
+  out << result << "\n";
   }
 }
 
+//void GenerateBids(int rounds, int budget, std::string output_filename) {
+// std::ofstream out{output_filename};
+// for (int i{0}; i < rounds/3; i++)
+ 
 // ============================================================================
 // MAIN FUNCTION
 // Use this to test your code.
